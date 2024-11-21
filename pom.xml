@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>javafx-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java.version>21.0.2</java.version> <!-- O la versión de Java que estés usando -->
+    </properties>
+
+    <dependencies>
+        <!-- Dependencia de JavaFX Controls -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>23.0.1</version> <!-- Usa la versión de JavaFX que descargaste -->
+        </dependency>
+
+        <!-- Dependencia de JavaFX FXML -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>23.0.1</version> <!-- Usa la misma versión de JavaFX -->
+        </dependency>
+
+        <!-- Dependencia de Jackson para manejar JSON -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.15.0</version> <!-- Versión más reciente y compatible con Java 21 -->
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Plugin de JavaFX para Maven -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version> <!-- Usa la versión más reciente del plugin -->
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>run</goal> <!-- Solo necesitamos 'run' -->
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>main.MainApp</mainClass> <!-- Cambia 'main.MainApp' por la clase principal de tu proyecto -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
